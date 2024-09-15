@@ -57,6 +57,8 @@ def draw():
                 screen.clear()
                 background.draw()
                 ship.draw()
+                if health < 1:
+                    screen.draw.text(f"Health: {health}, You Lose", center = (WIDTH/2, HEIGHT/2))  
                 if len(str(enemykillCharge)) >= 10:
                         text = f"charge:{charge}  You Won!!"
                         screen.draw.text(text, center = (WIDTH/2, HEIGHT/2))
